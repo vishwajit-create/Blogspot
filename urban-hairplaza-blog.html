@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Art of the Perfect Cut — Urban Hairplaza Blog</title>
+<meta name="description" content="Discover why Urban Hairplaza is Araria's premium grooming destination — from classic cuts to royal shaves and doorstep home service.">
+<meta property="og:title" content="The Art of the Perfect Cut — Urban Hairplaza">
+<meta property="og:description" content="Premium grooming in Araria, Bihar. In-shop or at your doorstep.">
+<meta property="og:url" content="https://studio--studio-9488946322-c7194.us-central1.hosted.app">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1208;
+    --gold: #b8882a;
+    --gold-light: #e8c97e;
+    --cream: #faf6ef;
+    --cream-dark: #f0e8d8;
+    --muted: #7a6a52;
+    --border: rgba(184,136,42,0.25);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 17px;
+  }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    background: var(--ink);
+    color: var(--gold-light);
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 72vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px 60px;
+    overflow: hidden;
+    background: var(--ink);
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-image:
+      url('https://images.unsplash.com/photo-1585749924227-dd0046c26a8a?w=1200&q=60');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.22;
+  }
+
+  .hero-pattern {
+    position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgba(184,136,42,0.04) 0px,
+      rgba(184,136,42,0.04) 1px,
+      transparent 1px,
+      transparent 28px
+    );
+  }
+
+  .hero-content { position: relative; z-index: 2; max-width: 760px; }
+
+  .hero-tag {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.18;
+    margin-bottom: 24px;
+    animation: fadeUp 0.7s 0.1s ease both;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: rgba(255,255,255,0.55);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    animation: fadeUp 0.7s 0.2s ease both;
+  }
+
+  .hero-meta span { display: flex; align-items: center; gap: 7px; }
+
+  .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 28px; left: 50%;
+    transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    color: rgba(255,255,255,0.3);
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    animation: fadeUp 1s 0.5s ease both;
+  }
+
+  .scroll-line {
+    width: 1px; height: 36px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  /* ── ARTICLE WRAPPER ── */
+  .article {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 80px;
+  }
+
+  /* ── DROPCAP ── */
+  .dropcap::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: var(--gold);
+    float: left;
+    line-height: 0.82;
+    margin: 8px 14px 0 0;
+  }
+
+  /* ── PULL QUOTE ── */
+  .pullquote {
+    border-left: 3px solid var(--gold);
+    padding: 4px 0 4px 28px;
+    margin: 44px 0;
+  }
+
+  .pullquote p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-style: italic;
+    color: var(--ink);
+    line-height: 1.55;
+  }
+
+  .pullquote cite {
+    display: block;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 14px;
+  }
+
+  /* ── SECTION HEADING ── */
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 52px 0 20px;
+  }
+
+  .section-head h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .section-head .num {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .rule { flex: 1; height: 1px; background: var(--border); }
+
+  /* ── SERVICES GRID ── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .svc-card {
+    background: var(--ink);
+    border-radius: 4px;
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease;
+  }
+
+  .svc-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .svc-card:hover { transform: translateY(-4px); }
+  .svc-card:hover::before { transform: scaleX(1); }
+
+  .svc-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--gold-light);
+  }
+
+  .svc-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin: 8px 0 4px;
+  }
+
+  .svc-time {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 1px;
+  }
+
+  /* ── IMAGE ── */
+  .img-full {
+    width: 100%;
+    aspect-ratio: 16/7;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 36px 0;
+    display: block;
+  }
+
+  .img-caption {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: -28px;
+    margin-bottom: 36px;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials {
+    background: var(--cream-dark);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 40px 32px;
+    margin: 44px 0;
+    border-radius: 4px;
+  }
+
+  .testimonials h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .testi-list { display: flex; flex-direction: column; gap: 20px; }
+
+  .testi {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .testi-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .testi-body p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #3a2e1e;
+  }
+
+  .testi-body strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+
+  /* ── CTA ── */
+  .cta-block {
+    background: var(--ink);
+    border-radius: 4px;
+    padding: 48px 40px;
+    text-align: center;
+    margin: 52px 0 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-block::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      rgba(184,136,42,0.05) 0, rgba(184,136,42,0.05) 1px,
+      transparent 1px, transparent 20px
+    );
+  }
+
+  .cta-block > * { position: relative; z-index: 1; }
+
+  .cta-block h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  .cta-block p {
+    color: rgba(255,255,255,0.55);
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+
+  .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  .btn-gold {
+    background: var(--gold);
+    color: var(--ink);
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-outline {
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+
+  .btn-outline:hover { border-color: var(--gold); transform: translateY(-2px); }
+
+  /* ── FOOTER ── */
+  .blog-footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .blog-footer a { color: var(--gold-light); text-decoration: none; }
+
+  /* ── DIVIDER ── */
+  .ornament {
+    text-align: center;
+    margin: 44px 0;
+    color: var(--gold);
+    font-size: 22px;
+    letter-spacing: 8px;
+  }
+
+  p { margin-bottom: 22px; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  @media (max-width: 600px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.2rem; }
+    .cta-block { padding: 36px 24px; }
+    .pullquote { padding-left: 20px; }
+    .hero-meta { flex-wrap: wrap; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">Urban Hairplaza · Premium Grooming · Araria, Bihar</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <span class="hero-tag">Urban Hairplaza Blog</span>
+    <h1>The Art of<br>the <em>Perfect Cut</em></h1>
+    <div class="hero-meta">
+      <span>June 2025</span>
+      <span class="dot"></span>
+      <span>5 min read</span>
+      <span class="dot"></span>
+      <span>Araria, Bihar</span>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    scroll
+  </div>
+</header>
+
+<!-- ARTICLE -->
+<main class="article">
+
+  <p class="dropcap">
+    In the heart of Araria, Bihar, a new standard of grooming has arrived. Urban Hairplaza isn't just a barbershop — it's a destination where craft meets confidence, and where every man walks out feeling like the best version of himself.
+  </p>
+
+  <p>
+    Founded with a singular vision — to bring big-city grooming culture to small-city men — Urban Hairplaza blends traditional barbering techniques with a thoroughly modern sensibility. From the moment you step inside, the atmosphere tells you: this place takes its work seriously.
+  </p>
+
+  <img
+    class="img-full"
+    src="https://images.unsplash.com/photo-1621202863953-e3a137b02c89?w=900&q=75"
+    alt="Modern interior of Urban Hairplaza barbershop"
+    loading="lazy"
+  >
+  <p class="img-caption">The Urban Hairplaza Experience — Style Meets Comfort</p>
+
+  <!-- SERVICES -->
+  <div class="section-head">
+    <span class="num">01</span>
+    <div class="rule"></div>
+    <h2>Services We Offer</h2>
+  </div>
+
+  <p>
+    Whether you're here for a quick trim before a big meeting or a full grooming ritual on a relaxed Sunday, our menu is built to serve every occasion.
+  </p>
+
+  <div class="services-grid">
+    <div class="svc-card">
+      <div class="svc-price">₹150</div>
+      <div class="svc-name">Classic Haircut</div>
+      <div class="svc-time">30 mins</div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-price">₹200</div>
+      <div class="svc-name">Beard Trim & Shape-Up</div>
+      <div class="svc-time">20 mins</div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-price">₹250</div>
+      <div class="svc-name">Royal Shave</div>
+      <div class="svc-time">30 mins</div>
+    </div>
+  </div>
+
+  <p>
+    Each service is a ritual in itself. Our <strong>Classic Haircut</strong> finishes with a hot towel and straight razor neck shave — a detail most shops skip. The <strong>Royal Shave</strong> goes further: pre-shave oil, rich lather, and a moisturizing after-shave balm that leaves skin silky and fresh.
+  </p>
+
+  <div class="pullquote">
+    <p>"A great haircut isn't just about scissors — it's about the thirty minutes a man takes for himself."</p>
+    <cite>— Urban Hairplaza Team</cite>
+  </div>
+
+  <!-- HOME SERVICE -->
+  <div class="section-head">
+    <span class="num">02</span>
+    <div class="rule"></div>
+    <h2>We Come to You</h2>
+  </div>
+
+  <p>
+    Too busy? Too comfortable at home? Urban Hairplaza's <strong>Home Service</strong> is one of the most loved offerings in Araria. Book online, and a skilled barber arrives at your doorstep — fully equipped, fully professional. Same quality, zero commute.
+  </p>
+
+  <p>
+    It's the kind of service that was once reserved for royalty. Now it's just a click away.
+  </p>
+
+  <img
+    class="img-full"
+    src="https://images.unsplash.com/photo-1613083313939-c148529d1872?w=900&q=75"
+    alt="Happy client after a fresh haircut"
+    loading="lazy"
+  >
+  <p class="img-caption">Confidence After Every Cut</p>
+
+  <!-- BARBERS -->
+  <div class="section-head">
+    <span class="num">03</span>
+    <div class="rule"></div>
+    <h2>Craftsmen, Not Just Barbers</h2>
+  </div>
+
+  <p>
+    The Urban Hairplaza team is carefully chosen — barbers who understand that grooming is personal. They listen, they advise, and they execute with precision. Whether you know exactly what you want or need guidance, they've got you.
+  </p>
+
+  <p>
+    Every barber at Urban Hairplaza is trained in both classical and contemporary techniques: from the timeless scissor-over-comb to the sharp fades that trending on every Instagram feed right now.
+  </p>
+
+  <div class="ornament">✦ ✦ ✦</div>
+
+  <!-- TESTIMONIALS -->
+  <div class="testimonials">
+    <h3>What Clients Are Saying</h3>
+    <div class="testi-list">
+      <div class="testi">
+        <div class="testi-avatar">R</div>
+        <div class="testi-body">
+          <p>"Best haircut I've had in Araria. The attention to detail is amazing. Raj is a true professional!"</p>
+          <strong>Ravi Sharma — Araria</strong>
+        </div>
+      </div>
+      <div class="testi">
+        <div class="testi-avatar">V</div>
+        <div class="testi-body">
+          <p>"The home service is a game-changer for my busy schedule. Sameer always does an incredible job with my beard."</p>
+          <strong>Vikram Patel — Araria</strong>
+        </div>
+      </div>
+      <div class="testi">
+        <div class="testi-avatar">S</div>
+        <div class="testi-body">
+          <p>"Great atmosphere and skilled barbers. I always leave feeling fresh and confident. Highly recommended!"</p>
+          <strong>Sunil Yadav — Araria</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHERE TO FIND -->
+  <div class="section-head">
+    <span class="num">04</span>
+    <div class="rule"></div>
+    <h2>Find Us in Araria</h2>
+  </div>
+
+  <p>
+    Urban Hairplaza is located near the Phanishwar Nath Renu Statue, Simraha, Araria — 854331, Bihar. We're open every day from <strong>9 AM to 9 PM</strong>, so there's no excuse not to look your best.
+  </p>
+
+  <p>
+    📞 &nbsp;+91 6202 692 426 &nbsp;|&nbsp; +91 73220 56520 &nbsp;|&nbsp; +91 9241156709<br>
+    ✉️ &nbsp;urbanhairplazapvtltd@gmail.com
+  </p>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <h2>Ready for Your Best Look?</h2>
+    <p>Book an in-shop appointment or schedule a home visit — it only takes a minute.</p>
+    <div class="cta-buttons">
+      <a href="https://studio--studio-9488946322-c7194.us-central1.hosted.app/book" class="btn-gold">Book Now</a>
+      <a href="https://studio--studio-9488946322-c7194.us-central1.hosted.app" class="btn-outline">Visit Website</a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="blog-footer">
+  © 2025 <a href="https://studio--studio-9488946322-c7194.us-central1.hosted.app">URBAN HAIRPLAZA PRIVATE LIMITED</a> · Araria, Bihar · Developed by Vishwajit Yadav
+</footer>
+
+</body>
+</html>
